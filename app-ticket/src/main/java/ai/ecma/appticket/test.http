@@ -1,0 +1,31 @@
+POST http://localhost:80/api/auth/check-phone-number
+Content-Type: application/json
+
+{
+  "phoneNumber": "+998903271791"
+}
+
+###
+POST http://localhost/api/auth/check-code
+Content-Type: application/json
+
+{
+  "phoneNumber": "+998903271791",
+  "code": "418624"
+}
+
+###
+POST http://localhost/api/auth/sign-up
+Content-Type: application/json
+
+{
+  "phoneNumber": "+998903271791",
+  "code": "418624",
+  "firstName": "Shoxzod",
+  "lastName": "Ravshanov"
+}
+###
+GET http://localhost/api/address
+
+###
+POST http://localhost/api/seat-template-chair/create

@@ -1,0 +1,57 @@
+server:
+  port: 80
+
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app_ticket_g10
+    username: postgres
+    password: 2564
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
+    show-sql: true
+    properties:
+      hibernate:
+       enable_lazy_load_no_trans: true
+    open-in-view: false
+
+springdoc:
+  api-docs:
+    path: /api/v1/docs
+  swagger-ui:
+    tags-sorter: alphabetically
+    path: /api/v1/swagger-ui.html
+#    operations-sorter: alpha
+
+
+
+
+dataLoaderMode: never
+
+
+twilio.accountSID: ACb2a3cd20c4da9182b03ba5f9b871cb2e #AC12f709df4c3da648649a6343133dfa85
+twilio.authToken: 8ed4e2ac5be76815892a9de302c30ba8 #060c08a5a7e9f3e0bb47e53361552227
+twilio.myTwilioPhoneNumber: +16782643653 #+19404129516
+
+
+accessTokenLifeTime: 86400000
+refreshTokenLifeTime: 172800000
+
+tokenSecretKey: thisIsSecretKey
+
+verificationCodeLimit: 10
+verificationCodeTime: 86400000
+
+verificationCodeExpiredTime: 180000
+
+orderLifeTime: 3000000
+
+
+
+
